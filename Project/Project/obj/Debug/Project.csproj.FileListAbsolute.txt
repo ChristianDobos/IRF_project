@@ -1,0 +1,10 @@
+D:\BCE\IRF\Projektfeladat\Project\Project\bin\Debug\Project.exe.config
+D:\BCE\IRF\Projektfeladat\Project\Project\bin\Debug\Project.exe
+D:\BCE\IRF\Projektfeladat\Project\Project\bin\Debug\Project.pdb
+D:\BCE\IRF\Projektfeladat\Project\Project\obj\Debug\Project.csprojAssemblyReference.cache
+D:\BCE\IRF\Projektfeladat\Project\Project\obj\Debug\Project.Form1.resources
+D:\BCE\IRF\Projektfeladat\Project\Project\obj\Debug\Project.Properties.Resources.resources
+D:\BCE\IRF\Projektfeladat\Project\Project\obj\Debug\Project.csproj.GenerateResource.cache
+D:\BCE\IRF\Projektfeladat\Project\Project\obj\Debug\Project.csproj.CoreCompileInputs.cache
+D:\BCE\IRF\Projektfeladat\Project\Project\obj\Debug\Project.exe
+D:\BCE\IRF\Projektfeladat\Project\Project\obj\Debug\Project.pdb
