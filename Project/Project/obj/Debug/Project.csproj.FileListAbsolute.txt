@@ -8,3 +8,4 @@ D:\BCE\IRF\Projektfeladat\Project\Project\obj\Debug\Project.csproj.GenerateResou
 D:\BCE\IRF\Projektfeladat\Project\Project\obj\Debug\Project.csproj.CoreCompileInputs.cache
 D:\BCE\IRF\Projektfeladat\Project\Project\obj\Debug\Project.exe
 D:\BCE\IRF\Projektfeladat\Project\Project\obj\Debug\Project.pdb
+D:\BCE\IRF\Projektfeladat\Project\Project\obj\Debug\Project.Form2.resources

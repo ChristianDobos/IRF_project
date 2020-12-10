@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 
+
 namespace Project
 {
     public partial class Form1 : Form
@@ -22,6 +23,9 @@ namespace Project
             InitializeComponent();
 
             checkBox1.CheckedChanged += CheckBox1_CheckedChanged;
+            label3.Visible = false;
+            label3.Text = számláló.ToString();
+            label3.ForeColor = Color.Red;
             
         }
         //CHECKBOX
@@ -43,6 +47,7 @@ namespace Project
             {
                 if (textBox1.Text == "Admin" & textBox2.Text == "Password")
                 {
+                    
                     Form2 f2 = new Form2();
                     f2.Show();
                 }
@@ -57,8 +62,8 @@ namespace Project
                 t.Start();
                 t.Interval = 1000;
                 t.Tick += T_Tick;
-                textBox1.Enabled = false;
-                textBox2.Enabled = false;
+                textBox1.Enabled = false;  textBox2.Enabled = false;
+                button1.Enabled = false;
                 MessageBox.Show("Újra próbálkozhat " + számláló + " másodperc múlva");
 
                 
@@ -68,13 +73,17 @@ namespace Project
         //TICK
         private void T_Tick(object sender, EventArgs e)
         {
+            label3.Visible = true;
             számláló--;
+            label3.Text = számláló.ToString();
             if (számláló==0)
             {
                 t.Stop();
                 számláló = 30;
                 próbálkozás = 1;
                 textBox1.Enabled = true; textBox2.Enabled = true;
+                button1.Enabled = true;
+                label3.Visible = false;
             }
         }
 
