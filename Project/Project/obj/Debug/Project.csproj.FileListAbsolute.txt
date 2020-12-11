@@ -9,3 +9,10 @@ D:\BCE\IRF\Projektfeladat\Project\Project\obj\Debug\Project.csproj.CoreCompileIn
 D:\BCE\IRF\Projektfeladat\Project\Project\obj\Debug\Project.exe
 D:\BCE\IRF\Projektfeladat\Project\Project\obj\Debug\Project.pdb
 D:\BCE\IRF\Projektfeladat\Project\Project\obj\Debug\Project.Form2.resources
+D:\BCE\IRF\Projektfeladat\Project\Project\bin\Debug\Database1.mdf
+D:\BCE\IRF\Projektfeladat\Project\Project\bin\Debug\Database1_log.ldf
+D:\BCE\IRF\Projektfeladat\Project\Project\bin\Debug\EntityFramework.dll
+D:\BCE\IRF\Projektfeladat\Project\Project\bin\Debug\EntityFramework.SqlServer.dll
+D:\BCE\IRF\Projektfeladat\Project\Project\bin\Debug\EntityFramework.xml
+D:\BCE\IRF\Projektfeladat\Project\Project\bin\Debug\EntityFramework.SqlServer.xml
+D:\BCE\IRF\Projektfeladat\Project\Project\obj\Debug\Project.csproj.CopyComplete

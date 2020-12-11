@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Database1Model1StoreContainer" CdmEntityContainer="Database1Entities">
+    <EntitySetMapping Name="Covid">
+      <EntityTypeMapping TypeName="Database1Model1.Covid">
+        <MappingFragment StoreEntitySet="Covid">
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Cases" ColumnName="Cases" />
+          <ScalarProperty Name="Deaths" ColumnName="Deaths" />
+          <ScalarProperty Name="Population" ColumnName="Population" />
+          <ScalarProperty Name="Commulative" ColumnName="Commulative" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
