@@ -16,3 +16,4 @@ D:\BCE\IRF\Projektfeladat\Project\Project\bin\Debug\EntityFramework.SqlServer.dl
 D:\BCE\IRF\Projektfeladat\Project\Project\bin\Debug\EntityFramework.xml
 D:\BCE\IRF\Projektfeladat\Project\Project\bin\Debug\EntityFramework.SqlServer.xml
 D:\BCE\IRF\Projektfeladat\Project\Project\obj\Debug\Project.csproj.CopyComplete
+D:\BCE\IRF\Projektfeladat\Project\Project\obj\Debug\Project.csproj.ResolveComReference.cache

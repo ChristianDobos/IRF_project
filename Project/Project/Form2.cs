@@ -12,6 +12,7 @@ using System.IO;
 using System.Diagnostics;
 using System.Xml;
 
+
 namespace Project
 {
     public partial class Form2 : Form
@@ -24,6 +25,7 @@ namespace Project
             BindingList<Covid> covids = new BindingList<Covid>();
             context.Covid.Load();
             database1DataSetBindingSource.DataSource = context.Covid.Local;
+            
 
             chart1.Visible = false;
             
@@ -136,6 +138,12 @@ namespace Project
                 chart1.Visible = false;
             }
          
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Form3 f3 = new Form3();
+            f3.Show();
         }
     }
 
