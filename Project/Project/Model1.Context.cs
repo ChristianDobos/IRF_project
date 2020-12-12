@@ -26,5 +26,6 @@ namespace Project
         }
     
         public virtual DbSet<Covid> Covid { get; set; }
+        public virtual DbSet<Login> Login { get; set; }
     }
 }

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<record>
+	<date>2020.12.10</date>
+	<cases>5331</cases>
+	<deaths>231</deaths>
+	<population>9773432</population>
+	<commulative>2222</commulative>
+	</record>
+
+	<record>
+	<date>2020.12.09</date>
+	<cases>4321</cases>
+	<deaths>112</deaths>
+	<population>9773432</population>
+	<commulative>1934</commulative>
+	</record>
+
+</root>

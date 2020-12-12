@@ -25,9 +25,8 @@ namespace Project
         {
             InitializeComponent();
 
-            BindingList<Covid> covids = new BindingList<Covid>();
-            context.Covid.Load();
-            
+            BindingList<Login> logins = new BindingList<Login>();
+            context.Login.Load();
             
 
             checkBox1.CheckedChanged += CheckBox1_CheckedChanged;
@@ -58,6 +57,7 @@ namespace Project
                     
                     Form2 f2 = new Form2();
                     f2.Show();
+                    
                 }
                 else
                 {
@@ -71,7 +71,7 @@ namespace Project
                 t.Interval = 1000;
                 t.Tick += T_Tick;
                 textBox1.Enabled = false;  textBox2.Enabled = false;
-                button1.Enabled = false; button2.Enabled = false; checkBox1.Enabled = false;
+                button1.Enabled = false;  checkBox1.Enabled = false;
                 MessageBox.Show("Újra próbálkozhat " + számláló + " másodperc múlva");
 
                 
@@ -90,11 +90,12 @@ namespace Project
                 számláló = 30;
                 próbálkozás = 1;
                 textBox1.Enabled = true; textBox2.Enabled = true;
-                button1.Enabled = true; button2.Enabled = true; checkBox1.Enabled = true;
+                button1.Enabled = true;  checkBox1.Enabled = true;
                 label3.Visible = false;
             }
         }
 
         
+           
     }
 }
