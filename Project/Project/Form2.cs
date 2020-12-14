@@ -242,6 +242,8 @@ namespace Project
 
             int LastRowID = (xlSheet.UsedRange.Rows.Count + 1);
 
+
+            //DIAGRAM
             object misValue = System.Reflection.Missing.Value;
 
             Excel.Range chartrange;
