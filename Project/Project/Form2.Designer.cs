@@ -101,7 +101,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(160, 80);
             this.button3.TabIndex = 2;
-            this.button3.Text = "Előrejelzés";
+            this.button3.Text = "Excel";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 

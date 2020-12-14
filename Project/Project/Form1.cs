@@ -20,6 +20,7 @@ namespace Project
         int számláló=30;
 
         Database1Entities context = new Database1Entities();
+        List<Login> Logins;
 
         public Form1()
         {
@@ -50,14 +51,23 @@ namespace Project
         //LOGIN
         private void button1_Click(object sender, EventArgs e)
         {
-            if (próbálkozás<3)
+            Logins = context.Login.ToList();
+            bool beléphet = false;
+            if (próbálkozás < 3)
             {
-                if (textBox1.Text == "Admin" & textBox2.Text == "Password")
+                foreach (Login l in Logins)
                 {
-                    
+                    if (textBox1.Text == l.Username.ToString() & textBox2.Text == l.Password.ToString())
+                    {
+                        beléphet = true;
+                    }
+
+                }
+
+                if (beléphet == true)
+                {
                     Form2 f2 = new Form2();
                     f2.Show();
-                    
                 }
                 else
                 {
@@ -70,11 +80,11 @@ namespace Project
                 t.Start();
                 t.Interval = 1000;
                 t.Tick += T_Tick;
-                textBox1.Enabled = false;  textBox2.Enabled = false;
-                button1.Enabled = false;  checkBox1.Enabled = false;
+                textBox1.Enabled = false; textBox2.Enabled = false;
+                button1.Enabled = false; checkBox1.Enabled = false;
                 MessageBox.Show("Újra próbálkozhat " + számláló + " másodperc múlva");
 
-                
+
             }
   
         }

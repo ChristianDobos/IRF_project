@@ -13,6 +13,8 @@ using System.Diagnostics;
 using System.Xml;
 using Excel = Microsoft.Office.Interop.Excel;
 using System.Reflection;
+using System.Windows.Forms.DataVisualization.Charting;
+
 
 
 namespace Project
@@ -240,32 +242,28 @@ namespace Project
 
             int LastRowID = (xlSheet.UsedRange.Rows.Count + 1);
 
+            object misValue = System.Reflection.Missing.Value;
 
-            for (int j = LastRowID; j < LastRowID + 7; j++)
-            {
-                //date
-                xlSheet.Cells[j, 1] = "=A" + (j - 1).ToString() + "+1";
-                //population
-                xlSheet.Cells[j, 4] = "9772756";
-                //cases
+            Excel.Range chartrange;
+            Excel.Range chartrange2;
+            Excel.ChartObjects xlCharts = (Excel.ChartObjects)xlSheet.ChartObjects(Type.Missing);
+            Excel.ChartObject myChart = (Excel.ChartObject)xlCharts.Add(10, 80, 300, 250);
 
+            Excel.ChartObjects xlCharts2 = (Excel.ChartObjects)xlSheet.ChartObjects(Type.Missing);
+            Excel.ChartObject myChart2 = (Excel.ChartObject)xlCharts2.Add(10, 80, 300, 250);
 
-            }
+            Excel.Chart chartPage = myChart.Chart;
+            Excel.Chart chartPage2 = myChart2.Chart;
 
+            chartrange = xlSheet.get_Range(GetCell(1, 2), GetCell(LastRowID, 2));
+            chartrange2 = xlSheet.get_Range(GetCell(1, 3), GetCell(LastRowID, 3));
+            chartPage.SetSourceData(chartrange, misValue); chartPage2.SetSourceData(chartrange2, misValue);
+
+            
         }
 
     }
 
 
-    public class GrafikonEsetek
-    {
-        public string Dátum { get; set; }
-        public int? Esetek { get; set; }
-    }
-
-    public class GrafikonHalálok
-    {
-        public string Dátum { get; set; }
-        public int? Halálok { get; set; }
-    }
+   
 }
