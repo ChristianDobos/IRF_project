@@ -39,6 +39,8 @@ namespace Project
         {
             Covids = context.Covid.ToList();
         }
+
+
         // SEGÉDFÜGGVÉNY EXCEL KOORDINÁTÁK MEGHATÁROZÁSÁHOZ
         private string GetCell(int x, int y)
         {
@@ -119,11 +121,16 @@ namespace Project
 
             int LastRowID = (xlSheet.UsedRange.Rows.Count + 1);
 
-           
+
+            for (int j = LastRowID; j < LastRowID+7; j++)
+            {
+                xlSheet.Cells[j, 1] = "=A" + (j-1).ToString() + "+1";
+                
+            }
+
 
         }
 
-        
 
     }
 
