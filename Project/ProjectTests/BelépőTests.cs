@@ -12,13 +12,26 @@ namespace Project.Tests
     public class BelépőTests
     {
         [TestMethod()]
-        public void belépheteTest()
+        public void belépheteTest1()
         {
             //ARRANGE
             var belépő = new Belépő();
 
             //ACT
             var result = belépő.beléphete(new User { aktív = true });
+
+            //ASSERT
+            Assert.IsTrue(result);
+        }
+
+        [TestMethod()]
+        public void belépheteTest2()
+        {
+            //ARRANGE
+            var belépő = new Belépő();
+
+            //ACT
+            var result = belépő.beléphete(new User { aktív = false });
 
             //ASSERT
             Assert.IsTrue(result);
