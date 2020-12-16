@@ -11,3 +11,5 @@ A belépés után a statisztika gombra kattintva egy datagridview segítségéve
 A grafikon gombra kattintva diagramon is képet kaphatunk az esetszámok alakulásáról.
 Az Excel gomb pedig egy új excel munkafüzetet generál az adatokból, valamint két diagramot is megkapunk az esetszámokról és a halálozási adatokról.
 Az R számítása fülön az aktuális esetszámok megadásával kiszámíthatjuk a járvány aktuális R mutatójának értékét.
+
+A felhasznált adatok forrása: https://data.europa.eu/euodp/hu/data/dataset/covid-19-coronavirus-data
