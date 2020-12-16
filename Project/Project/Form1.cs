@@ -69,7 +69,7 @@ namespace Project
             {
                 foreach (User u in Users)
                 {
-                    if (textBox1.Text == u.Username.ToString() & textBox2.Text == u.Password.ToString() & u.aktív == true)
+                    if (textBox1.Text == u.Username & textBox2.Text == u.Password & u.aktív == true)
                     {
                         beléphet = true;
                     }

@@ -284,7 +284,7 @@ namespace Project
                 MessageBox.Show("R értéke t időpontban nem lehet 0");
             }
         }
-
+        //R
         private void button4_Click(object sender, EventArgs e)
         {
             if (label1.Visible==false)
