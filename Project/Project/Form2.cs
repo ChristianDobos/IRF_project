@@ -37,6 +37,8 @@ namespace Project
             
 
             chart1.Visible = false;
+            label1.Visible = false; label2.Visible = false;label3.Visible = false;textBox1.Visible = false;textBox2.Visible = false; buttonR.Visible = false;
+
             
         }
 
@@ -56,6 +58,7 @@ namespace Project
                 dataGridView1.Visible = true;
                 bindingNavigator1.Visible = true;
                 chart1.Visible = false;
+                label1.Visible = false; label2.Visible = false; label3.Visible = false; textBox1.Visible = false; textBox2.Visible = false; buttonR.Visible = false;
             }
             else
             {
@@ -141,6 +144,7 @@ namespace Project
             {
                 chart1.Visible = true;
                 dataGridView1.Visible = false; bindingNavigator1.Visible = false;
+                label1.Visible = false; label2.Visible = false; label3.Visible = false; textBox1.Visible = false; textBox2.Visible = false; buttonR.Visible = false;
             }
             else
             {
@@ -263,9 +267,37 @@ namespace Project
 
             
         }
+        //R számítás
+        private void buttonR_Click(object sender, EventArgs e)
+        {
+           
 
+            double rt0 = double.Parse(textBox1.Text);
+            double rt2 = double.Parse(textBox2.Text);
+
+            if (rt0!=0)
+            {
+                label1.Text = (rt2 / rt0).ToString();
+            }
+            else
+            {
+                MessageBox.Show("R értéke t időpontban nem lehet 0");
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (label1.Visible==false)
+            {
+                label1.Visible = true;label2.Visible = true;label3.Visible = true;buttonR.Visible = true;textBox1.Visible = true;textBox2.Visible = true;
+            }
+            else
+            {
+                label1.Visible = false; label2.Visible = false; label3.Visible = false; textBox1.Visible = false; textBox2.Visible = false; buttonR.Visible = false;
+            }
+        }
     }
 
-
+    
    
 }

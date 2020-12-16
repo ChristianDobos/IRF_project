@@ -48,6 +48,9 @@ namespace Project
                 textBox2.UseSystemPasswordChar = true;
             }
         }
+
+        
+
         //LOGIN
         private void button1_Click(object sender, EventArgs e)
         {
@@ -86,7 +89,7 @@ namespace Project
 
 
             }
-  
+
         }
         //TIMER
         private void T_Tick(object sender, EventArgs e)
@@ -106,6 +109,5 @@ namespace Project
         }
 
         
-           
     }
 }
