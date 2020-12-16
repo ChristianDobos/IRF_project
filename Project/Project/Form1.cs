@@ -17,24 +17,32 @@ namespace Project
     {
         int próbálkozás = 1;
         Timer t = new Timer();
-        int számláló=30;
+        int számláló = 30;
 
-        Database1Entities context = new Database1Entities();
-        List<Login> Logins;
+       
+
+        List<User> Users = new List<User>();
 
         public Form1()
         {
             InitializeComponent();
 
-            BindingList<Login> logins = new BindingList<Login>();
-            context.Login.Load();
             
+
+            User user1 = new User();
+            user1.Username = "User1"; user1.Password = "Password1"; user1.aktív = false; Users.Add(user1);
+
+            User user2 = new User();
+            user2.Username = "User2"; user2.Password = "Password2"; user2.aktív = true; Users.Add(user2);
+
+            User user3 = new User();
+            user3.Username = "User3"; user3.Password = "Password3";user3.aktív = true;Users.Add(user3);
 
             checkBox1.CheckedChanged += CheckBox1_CheckedChanged;
             label3.Visible = false;
             label3.Text = számláló.ToString();
             label3.ForeColor = Color.Red;
-            
+
         }
         //CHECKBOX
         private void CheckBox1_CheckedChanged(object sender, EventArgs e)
@@ -49,18 +57,19 @@ namespace Project
             }
         }
 
-        
+
 
         //LOGIN
         private void button1_Click(object sender, EventArgs e)
         {
-            Logins = context.Login.ToList();
+            
+            
             bool beléphet = false;
             if (próbálkozás < 3)
             {
-                foreach (Login l in Logins)
+                foreach (User u in Users)
                 {
-                    if (textBox1.Text == l.Username.ToString() & textBox2.Text == l.Password.ToString())
+                    if (textBox1.Text == u.Username.ToString() & textBox2.Text == u.Password.ToString() & u.aktív == true)
                     {
                         beléphet = true;
                     }
@@ -74,7 +83,7 @@ namespace Project
                 }
                 else
                 {
-                    MessageBox.Show("Hibás felhasználónév vagy jelszó");
+                    MessageBox.Show("Hibás felhasználónév vagy jelszó / Inaktív falhasználó");
                     próbálkozás++;
                 }
             }
@@ -97,17 +106,39 @@ namespace Project
             label3.Visible = true;
             számláló--;
             label3.Text = számláló.ToString();
-            if (számláló==0)
+            if (számláló == 0)
             {
                 t.Stop();
                 számláló = 30;
                 próbálkozás = 1;
                 textBox1.Enabled = true; textBox2.Enabled = true;
-                button1.Enabled = true;  checkBox1.Enabled = true;
+                button1.Enabled = true; checkBox1.Enabled = true;
                 label3.Visible = false;
             }
         }
 
-        
+
+    }
+    
+    //UNIT TEST
+    public class Belépő
+    {
+        public User Felhasználó { get; set; }
+        public bool beléphete(User user)
+        {
+            if (user.aktív==true)
+            {
+                return true;
+            }
+            return false;
+        }
+
+    }
+
+    public class User
+    {
+        public bool aktív { get; set; }
+        public string Username;
+        public string Password;
     }
 }

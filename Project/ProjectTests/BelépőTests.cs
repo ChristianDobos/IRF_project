@@ -9,13 +9,19 @@ using System.Threading.Tasks;
 namespace Project.Tests
 {
     [TestClass()]
-    public class Form1Tests
+    public class BelépőTests
     {
         [TestMethod()]
-        public void BelépésTest()
+        public void belépheteTest()
         {
-            Assert.Fail();
+            //ARRANGE
+            var belépő = new Belépő();
 
+            //ACT
+            var result = belépő.beléphete(new User { aktív = true });
+
+            //ASSERT
+            Assert.IsTrue(result);
         }
     }
 }
